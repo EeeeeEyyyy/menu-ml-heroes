@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: 'Luckiest Guy', cursive;
+}
+section.heroes {
+  padding: 4rem 0;
+}
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.title h2 {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: #f39c12;
+  text-transform: uppercase;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.filter-btn {
+  background: #f39c12;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #0d0d0d;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border-bottom-left-radius:10px;
+  border-top-right-radius:10px;
+  border-style:dashed;
+  border-left-color:rgb(83, 83, 206);
+  border-top-color:rgb(30, 132, 233);
+  border-right-color:rgb(109, 109, 255);
+  border-bottom-color:rgb(120, 120, 221);
+}
+.filter-btn:hover {
+  background: #fff;
+  color: #f39c12;
+}
+.section-center {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 0 2rem;
+}
+.heroes-item {
+  background: #1c1c1c;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  height: 350px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+.heroes-item:hover {
+  transform: scale(1.05);
+}
+.photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+.heroes-item:hover .photo {
+  opacity: 0.8;
+}
+.item-info {
+  padding: 1rem;
+  text-align: center;
+}
+.item-info h4 {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  color: #f39c12;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-center {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media screen and (max-width: 576px) {
+  .section-center {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  .heroes-item {
+    height: 300px;
+  }
+  .photo {
+    height: 200px;
+  }
+}
